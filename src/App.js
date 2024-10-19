@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 
 const App = () => {
   const [activeLight,setActivelight]=useState("red");
-  const lights={
+  const [lights]=useState({
     red:{
       time:1,
       next:"yellow"
@@ -16,12 +16,12 @@ const App = () => {
       time:10,
       next:"red"
     }
-  }
+  })
   useEffect(()=>{
     setTimeout(() => {
       setActivelight(lights[activeLight].next)
     }, lights[activeLight].time*1000);
-  },[activeLight,lights])
+  },[activeLight])
 
   return (
     <div>
