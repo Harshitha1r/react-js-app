@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 
 const App = () => {
   const [activeLight,setActivelight]=useState("red");
-  const [lights]=useState({
+  const [lights,]=useState({
     red:{
       time:1,
       next:"yellow"
@@ -21,6 +21,7 @@ const App = () => {
     setTimeout(() => {
       setActivelight(lights[activeLight].next)
     }, lights[activeLight].time*1000);
+      // eslint-disable-next-line
   },[activeLight])
 
   return (
