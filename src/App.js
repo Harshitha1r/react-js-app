@@ -21,7 +21,7 @@ const App = () => {
     setTimeout(() => {
       setActivelight(lights[activeLight].next)
     }, lights[activeLight].time*1000);
-  },[activeLight])
+  },[activeLight,lights])
 
   return (
     <div>
