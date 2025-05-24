@@ -30,7 +30,8 @@
   height:10px;
   width:inherit;
   border:1px solid gray;
-  margin-top:9px
+  margin-top:9px;
+  transition:0.5s ease-in
 }
 
 .active {
